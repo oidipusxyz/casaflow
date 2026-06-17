@@ -370,7 +370,7 @@ CREATE TABLE rental_contracts (
   rent_frequency TEXT CHECK (rent_frequency IN ('bulanan', 'tahunan')) DEFAULT 'tahunan',
   start_date DATE NOT NULL,
   duration_months INTEGER NOT NULL,
-  end_date DATE GENERATED ALWAYS AS (start_date + (duration_months || ' months')::INTERVAL) STORED,
+  end_date DATE GENERATED ALWAYS AS (start_date + make_interval(months => duration_months)) STORED,
   deposit_amount BIGINT DEFAULT 0,
   renewal_notes TEXT,
   contract_file_url TEXT,
