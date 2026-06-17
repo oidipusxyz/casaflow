@@ -1,0 +1,20 @@
+{
+  "crons": [
+    {
+      "path": "/api/keep-alive",
+      "schedule": "0 9 */5 * *"
+    },
+    {
+      "path": "/api/reminders/pbb",
+      "schedule": "0 1 1 * *"
+    },
+    {
+      "path": "/api/reminders/kontrakan",
+      "schedule": "0 1 * * *"
+    },
+    {
+      "path": "/api/reminders/asuransi",
+      "schedule": "0 1 * * *"
+    }
+  ]
+}
